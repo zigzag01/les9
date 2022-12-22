@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>les9</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border: 1px solid palegreen;
+            padding: 2px;
+
+        }
+
+        .block1{
+            height: 15vw;
+            width: 15vw;
+            background-color: paleturquoise;
+        }
+        .block2{
+            height: 10vw;
+            width: 10vw;
+            background-color: palevioletred;
+        }
+        .block3{
+            height: 5vw;
+            width: 5vw;
+            background-color: peru;
+        }
+
+        .color_green{
+            background-color: palegreen;
+        }
+
+        .square{
+            width: 10vw;
+            height: 10vw;
+            border: 1px solid black;
+            background-color: cadetblue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <div class="container"> -->
+        <!-- <div class="block1"></div>
+        <div class="block2"></div>
+        <div class="block3"></div> -->
+
+        <!-- <div class="block1">
+            <div class="block2">
+                <div class="block3"></div>
+                    </div>
+                </div>
+            </div> 
+        </div> -->
+
+        <div class="square"></div>    
+
+    </div>
+
+    <script>
+
+        
+        /* let block1 = document.querySelector('.block1');
+        let block2 = document.querySelector('.block2');
+        let block3 = document.querySelector('.block3');
+
+         function blockAction1() {
+            //if (event.target != event.currentTarget)return; //== event.stopPropagation()
+            console.log('click on the block 1');
+            block1.classList.toggle('color_green');
+            //toggle: если есть такой класс - удалит, если нет - добавит
+            event.stopPropagation(); //останавливает всплытие
+            console.log(event.target); //ссылка на элемент, в котором происходит событие
+            console.log(event.currentTarget); //ссылка на элемент, на котором выполнилась функция
+        }
+        function blockAction2() {
+            console.log('click on the block 2');
+            block2.classList.toggle('color_green');
+            event.stopPropagation();
+        }
+        function blockAction3() {
+            console.log('click on the block 3');
+            block3.classList.toggle('color_green');
+            event.stopPropagation();
+        }
+
+        block1.addEventListener('click', blockAction1 ); //true
+        //true меняет порядок выполнения, возвращает всплытие
+        block2.addEventListener('click', blockAction2);
+        block3.addEventListener('click', blockAction3); */
+
+
+
+        //преобразование в одну функцию
+
+        /* let block1 = document.querySelector('.block1');
+        let block2 = document.querySelector('.block2');
+        let block3 = document.querySelector('.block3');
+
+        function blockAction(){
+            event.stopPropagation();
+            console.log(`click on the ${event.target.id}`);
+            event.target.classList.toggle('color_green');
+            console.log(event);
+        }
+
+        block1.addEventListener('click', blockAction);
+        block2.addEventListener('click', blockAction);
+        block3.addEventListener('click', blockAction); */
+
+
+
+        //1 нажим на 1 кв - повор
+
+        let square = document.querySelector('.square');
+        
+        square.addEventListener('contextmenu', function(){
+            event.preventDefault();
+            event.target.classList.toggle('color_green');
+        })
+
+        //2
+
+        /* let block1 = document.querySelector('.block1');
+        let block2 = document.querySelector('.block2');
+        let block3 = document.querySelector('.block3');
+
+        function blockAction(){
+            event.stopPropagation();
+            console.log(`click on the ${event.target.id}`);
+            event.target.classList.toggle('color_green');
+        }
+
+        block1.addEventListener('click', blockAction);
+        block2.addEventListener('click', blockAction);
+        block3.addEventListener('click', blockAction);
+
+        block1.addEventListener('contextmenu', function() {
+            event.preventDefault();
+            event.target.style.width = '20px';
+        }); */
+
+
+
+
+
+    </script>
+</body>
+</html>
